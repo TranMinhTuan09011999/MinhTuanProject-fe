@@ -1,0 +1,10 @@
+.m-textBox__txt {
+  line-height: 1;
+  font-size: 12px;
+  color: #9BA4AD;
+  margin-top: 8px;
+}
+
+.m-textBox__txt--error {
+  color: #e64646;
+}

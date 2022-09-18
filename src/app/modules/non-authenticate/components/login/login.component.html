@@ -1,1 +1,37 @@
-<p>login works!</p>
+<div class="card">
+  <div class="card-header px-lg-5">
+    <h1 class="text-primary">Login</h1>
+  </div>
+  <div class="card-body p-lg-5">
+    <h3 class="mb-4">Hi, welcome back! 👋👋</h3>
+    <p class="m-textBox__txt m-textBox__txt--error" *ngIf="errorMessage">
+      <span>* </span>
+      <span [innerHTML]="errorMessage"></span>
+    </p>
+    <form id="loginForm" [formGroup]="loginForm">
+      <div class="form-floating mb-3">
+        <input class="form-control" id="floatingInput" formControlName="email" type="email" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+        <p class="m-textBox__txt m-textBox__txt--error" [hidden]="!getValidates('email')">
+          <span *ngIf="hasError('email','required')">* Please enter your email</span>
+          <span *ngIf="hasError('email', 'pattern' )">* Pattern email is wrong</span>
+        </p>
+      </div>
+      <div class="form-floating mb-3">
+        <input class="form-control" id="floatingPassword" formControlName="password" type="password" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+        <p class="m-textBox__txt m-textBox__txt--error" [hidden]="!getValidates('password')">
+          <span *ngIf="hasError('password','required')">* Please enter your email</span>
+        </p>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" name="remember" id="remember">
+        <label class="form-check-label" for="remember">Remember me</label>
+      </div>
+      <button class="btn btn-primary" type="button" (click)="onSubmit()">Submit</button>
+    </form>
+  </div>
+  <div class="card-footer px-lg-5 py-lg-4">
+    <div class="text-sm text-muted">Don't have an account? <a (click)="userRegister()">Register</a>.</div>
+  </div>
+</div>
