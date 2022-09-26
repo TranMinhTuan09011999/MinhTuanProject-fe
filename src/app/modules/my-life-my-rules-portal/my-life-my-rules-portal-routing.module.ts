@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {RouterConstant} from "../../constant/router-constant";
 import {MyLifeMyRulesPortalComponent} from "./my-life-my-rules-portal.component";
 import {MyLifeMyRulesHomeComponent} from "./component/my-life-my-rules-home/my-life-my-rules-home.component";
+import {WalletsComponent} from "./component/wallets/wallets.component";
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         path: RouterConstant.MY_LIFE_MY_RULES_PORTAL_HOME_SCREEN.path,
         component: MyLifeMyRulesHomeComponent
+      },
+      {
+        path: RouterConstant.MY_LIFE_MY_RULES_PORTAL_WALLETS.path,
+        component: WalletsComponent
       }
     ]
   }

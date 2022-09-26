@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {RouterConstant} from "../../../../constant/router-constant";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigateToHome = () => {
+    this.router.navigate([RouterConstant.MY_LIFE_MY_RULES.path, RouterConstant.MY_LIFE_MY_RULES_PORTAL_HOME_SCREEN.path]).then();
+  }
+
+  navigateToMyWallets = () => {
+    this.router.navigate([RouterConstant.MY_LIFE_MY_RULES.path, RouterConstant.MY_LIFE_MY_RULES_PORTAL_WALLETS.path]).then();
   }
 
 }

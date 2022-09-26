@@ -15,13 +15,20 @@ export class APIConstant {
   };
 
   // -------------- SESSION --------------
+  public static API_SESSION_ATTR_GET: API = {
+    module: PortalType.SESSION,
+    uri: '{attrName}'
+  };
+
   public static API_SESSION_ATTR_UPD: API = {
     module: PortalType.SESSION,
     uri: '{attrName}'
   };
 
-  public static API_SESSION_ATTR_GET: API = {
-    module: PortalType.SESSION,
-    uri: '{attrName}'
+  // -------------- TEST --------------
+  public static API_TEST_EXCEL_EXPORT: API = {
+    module: PortalType.TEST,
+    uri: 'createExcelReportTest'
   };
+
 }

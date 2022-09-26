@@ -9,7 +9,12 @@ export class RouterConstant {
 
   public static MY_LIFE_MY_RULES_PORTAL_HOME_SCREEN: IRoute = {
     path: 'home',
-    label: 'my-life-my-rules-home',
+    label: 'home',
+  };
+
+  public static MY_LIFE_MY_RULES_PORTAL_WALLETS: IRoute = {
+    path: 'wallets',
+    label: 'wallets',
   };
   // *----------------------------Non Authenticate-------------------------------------*
   public static NON_AUTHENTICATE_LOGIN: IRoute = {
@@ -38,4 +43,33 @@ export class RouterConstant {
     label: 'component2',
   };
 
+  public static FORMS_ELEMENTS: IRoute = {
+    path: 'forms-elements',
+    label: 'forms-elements',
+  };
+
+  public static FORMS_LAYOUTS: IRoute = {
+    path: 'forms-layouts',
+    label: 'forms-layouts',
+  };
+
+  public static FORMS_EDITORS: IRoute = {
+    path: 'forms-editors',
+    label: 'forms-editors',
+  };
+
+  public static TABLES_GENERAL: IRoute = {
+    path: 'tables-general',
+    label: 'tables-general',
+  };
+
+  public static TABLES_DATA: IRoute = {
+    path: 'tables-data',
+    label: 'tables-data',
+  };
+
+  public static EXCEL_REPORT: IRoute = {
+    path: 'excel-report',
+    label: 'excel-report',
+  };
 }

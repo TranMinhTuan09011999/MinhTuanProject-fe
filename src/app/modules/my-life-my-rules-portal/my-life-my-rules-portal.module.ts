@@ -7,6 +7,7 @@ import { MyLifeMyRulesHomeComponent } from './component/my-life-my-rules-home/my
 import { HeaderComponent } from './component/header/header.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { WalletsComponent } from './component/wallets/wallets.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FooterComponent } from './component/footer/footer.component';
     MyLifeMyRulesHomeComponent,
     HeaderComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    WalletsComponent
   ],
   imports: [
     CommonModule,

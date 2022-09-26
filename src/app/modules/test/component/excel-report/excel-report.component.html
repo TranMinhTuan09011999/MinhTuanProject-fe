@@ -1,0 +1,57 @@
+<section class="section">
+  <div class="row row-center">
+    <div class="col-lg-12 col-width">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Candidate Information</h5>
+          <form>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">ID</label>
+              <label class="col-sm-10 col-form-label">{{data.id}}</label>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">Full Name</label>
+              <label class="col-sm-10 col-form-label">{{data.fullName}}</label>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">Class</label>
+              <label class="col-sm-10 col-form-label">{{data.grade}}</label>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Result: </h5>
+                <table class="table table-hover">
+                  <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Subject Name</th>
+                    <th scope="col">Score 1</th>
+                    <th scope="col">Score 2</th>
+                    <th scope="col">Classification</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <ng-container *ngFor="let result of data.resultList">
+                    <tr>
+                      <th scope="row">{{result.idSub}}</th>
+                      <td>{{result.subjectName}}</td>
+                      <td>{{result.score1}}</td>
+                      <td>{{result.score2}}</td>
+                      <td>{{result.classification}}</td>
+                    </tr>
+                  </ng-container>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row mb-3 row-center">
+              <div class="col-sm-2">
+                <button type="submit" class="btn btn-primary" (click)="report()">Report</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
