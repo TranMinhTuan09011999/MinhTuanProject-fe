@@ -72,4 +72,9 @@ export class RouterConstant {
     path: 'excel-report',
     label: 'excel-report',
   };
+
+  public static UI1: IRoute = {
+    path: 'UI1',
+    label: 'UI1',
+  };
 }

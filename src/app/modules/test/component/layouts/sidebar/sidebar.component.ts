@@ -38,4 +38,8 @@ export class SidebarComponent implements OnInit {
     this.router.navigate([RouterConstant.TEST.path, RouterConstant.TABLES_DATA.path]).then();
   }
 
+  navigateToUI1 = () => {
+    this.router.navigate([RouterConstant.TEST.path, RouterConstant.UI1.path]).then();
+  }
+
 }

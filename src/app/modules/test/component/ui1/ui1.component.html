@@ -1,0 +1,63 @@
+<section class="mb-3">
+  <div class="m-accordion p-3 pl-4 pr-4">
+    <h3 class="font-weight-bold">
+      User Information
+    </h3>
+    <hr>
+    <div class="ml-1 mt-1 mr-0 pl-0">
+      <div class="m-accordion__boxInner">
+        <table class="m-table">
+          <tr class="m-table__box">
+            <td class="m-table__item m-table__item--head text-center border-left">
+              <div class="m-checkBox">
+                <input type="checkbox" id="cbAll" value="0" name="cbAll" (click)="onCheckAll($event)"
+                       [checked]="checkAll()">
+                <label class="m-checkBox__box" for="cbAll"></label>
+              </div>
+            </td>
+            <td class="m-table__item m-table__item--head text-center">
+              Name
+            </td>
+            <td class="m-table__item m-table__item--head text-center">
+              Age
+            </td>
+            <td class="m-table__item m-table__item--head text-center">
+              DOB
+            </td>
+            <td class="m-table__item m-table__item--head text-center">
+              Phone
+            </td>
+            <td class="m-table__item m-table__item--head text-center border-right">
+              Address
+            </td>
+          </tr>
+          <ng-container *ngFor="let user of userList; let i = index">
+            <tr class="m-table__box">
+              <td class="m-table__item  m-vertical text-center border-left">
+                <div class="m-checkBox">
+                  <input type="checkbox" id="cb{{i}}" (change)="onChange(user, $event)">
+                  <label class="m-checkBox__box" for="cb{{i}}"></label>
+                </div>
+              </td>
+              <td class="m-table__item  m-vertical text-center">
+                {{user.name}}
+              </td>
+              <td class="m-table__item  m-vertical text-center">
+                {{user.age}}
+              </td>
+              <td class="m-table__item  m-vertical text-center">
+                {{user.DOB}}
+              </td>
+              <td class="m-table__item  m-vertical text-center">
+                {{user.phone}}
+              </td>
+              <td class="m-table__item  m-vertical text-center border-right">
+                {{user.address}}
+              </td>
+            </tr>
+          </ng-container>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

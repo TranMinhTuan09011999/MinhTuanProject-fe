@@ -10,6 +10,7 @@ import {FormsLayoutsComponent} from "./component/forms-layouts/forms-layouts.com
 import {FormEditorsComponent} from "./component/form-editors/form-editors.component";
 import {TablesGeneralComponent} from "./component/tables-general/tables-general.component";
 import {TablesDataComponent} from "./component/tables-data/tables-data.component";
+import {Ui1Component} from "./component/ui1/ui1.component";
 
 const routes: Routes = [
   {
@@ -47,6 +48,10 @@ const routes: Routes = [
       {
         path: RouterConstant.TABLES_DATA.path,
         component: TablesDataComponent,
+      },
+      {
+        path: RouterConstant.UI1.path,
+        component: Ui1Component,
       }
     ]
   }
