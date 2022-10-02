@@ -30,7 +30,9 @@
               "src/assets/css/style.css"
             ],
             "scripts": [
-              "src/assets/js/main.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/main.js",
+              "src/assets/js/modal.js"
             ]
           },
           "configurations": {

@@ -1,0 +1,131 @@
+.generalTxtLink {
+  color: #4c6da0;
+  text-decoration: none;
+}
+
+.m-modal {
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  display:none;
+  z-index: 10;
+}
+
+.modalOverLay {
+  position:absolute;
+  top:0;
+  left:0;
+  background: #5f6e7e;
+  opacity: .7;
+  width:100%;
+  min-width: 600px;
+  height:100%;
+  z-index:10;
+}
+
+.m-modal__box {
+  position:absolute;
+  z-index:11;
+  top:50%;
+  left:50%;
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  min-width: 490px;
+}
+
+.modal__ttl {
+  min-height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 18px 20px 13px;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #ebedef;
+  border: solid 1px #d8dadc;
+  border-radius: 5px 5px 0 0;
+  text-align: unset;
+}
+
+.modal__ttl--text-align-left {
+  text-align: left;
+}
+
+.modal__ttl--text-align-right {
+  text-align: right;
+}
+
+.modalTrigger__btn {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 22px;
+  margin: auto;
+}
+
+.modalTrigger__btn::before,
+.modalTrigger__btn::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #465566;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.modalTrigger__btn::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.modalTrigger__btn::after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.m-modal__item {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 28px 28px 25px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: solid 1px #d8dadc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+}
+
+.m-modal__item{
+  max-height: calc(100vh - 140px) !important;
+  overflow-y: auto;
+  border: unset;
+  border-radius: unset;
+  margin-bottom: -1px !important;
+}
+
+.m-modal__item--custom {
+  border-radius: 5px 5px 5px 5px;
+}
+
+.modal-footer{
+  width: 100%;
+  background-color: #FFF;
+  border-top: unset;
+  justify-content: center;
+}
+
+.modal-footer {
+  justify-content: center;
+  border: none;
+}
+
+

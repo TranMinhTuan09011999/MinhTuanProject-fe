@@ -1,0 +1,18 @@
+<span class="generalTxtLink modalTrigger" [attr.href]="'#' + contentId" [attr.id]="id"></span>
+<div class="m-modal m-modal-content" [attr.id]="contentId">
+  <div *ngIf="isSubmit" class="modalOverLay"></div>
+  <div *ngIf="!isSubmit" class="modalOverLay" [class.modalTrigger--close]="closeWhenOutside" (click)="closeWhenOutside && clickOutside()"></div>
+  <div class="m-modal__box" [style]="setWidth()">
+    <h2 [className]='classHeaderTextAlign()' *ngIf="header">
+      {{header}}
+      <a *ngIf="isShowClose" href="javascript:;" class="modalTrigger__btn modalTrigger--close" (click)="onClose()"></a>
+    </h2>
+    <div [className]="!header?'m-modal__item m-modal__item--custom':'m-modal__item'"
+         [style]="setHeightModalItem()">
+      <div #bodyContainer></div>
+    </div>
+    <div class="modal-footer">
+      <template #footerContainer></template>
+    </div>
+  </div>
+</div>
