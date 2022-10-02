@@ -16,6 +16,9 @@ import { FormEditorsComponent } from './component/form-editors/form-editors.comp
 import { TablesGeneralComponent } from './component/tables-general/tables-general.component';
 import { TablesDataComponent } from './component/tables-data/tables-data.component';
 import { Ui1Component } from './component/ui1/ui1.component';
+import { ModalComponent } from './component/modal/modal.component';
+import { Ui2Component } from './component/ui2/ui2.component';
+import {SharedModule} from "../shared/shared.module";
 
 
 @NgModule({
@@ -32,13 +35,16 @@ import { Ui1Component } from './component/ui1/ui1.component';
     FormEditorsComponent,
     TablesGeneralComponent,
     TablesDataComponent,
-    Ui1Component
+    Ui1Component,
+    ModalComponent,
+    Ui2Component
   ],
-  imports: [
-    CommonModule,
-    TestRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
-  ]
+    imports: [
+        CommonModule,
+        TestRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        SharedModule
+    ]
 })
 export class TestModule { }
