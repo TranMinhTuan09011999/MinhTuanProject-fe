@@ -10,19 +10,19 @@ import {TestModule} from "./modules/test/test.module";
 import {MyLifeMyRulesPortalModule} from "./modules/my-life-my-rules-portal/my-life-my-rules-portal.module";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NonAuthenticateModule,
-    UserModule,
-    AdminModule,
-    TestModule,
-    MyLifeMyRulesPortalModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NonAuthenticateModule,
+        UserModule,
+        AdminModule,
+        TestModule,
+        MyLifeMyRulesPortalModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

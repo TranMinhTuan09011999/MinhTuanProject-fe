@@ -1,3 +1,7 @@
 a {
   text-decoration: none !important;
 }
+
+.sidebar {
+  z-index: -10;
+}

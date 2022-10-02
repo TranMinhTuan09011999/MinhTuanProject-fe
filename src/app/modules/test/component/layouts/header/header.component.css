@@ -9,3 +9,7 @@
 a {
   text-decoration: none !important;
 }
+
+.header {
+  z-index: -10;
+}

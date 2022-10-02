@@ -73,8 +73,18 @@ export class RouterConstant {
     label: 'excel-report',
   };
 
+  public static MODAL: IRoute = {
+    path: 'modal',
+    label: 'modal',
+  };
+
   public static UI1: IRoute = {
     path: 'UI1',
     label: 'UI1',
+  };
+
+  public static UI2: IRoute = {
+    path: 'UI2',
+    label: 'UI2',
   };
 }

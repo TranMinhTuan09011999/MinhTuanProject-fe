@@ -11,6 +11,8 @@ import {FormEditorsComponent} from "./component/form-editors/form-editors.compon
 import {TablesGeneralComponent} from "./component/tables-general/tables-general.component";
 import {TablesDataComponent} from "./component/tables-data/tables-data.component";
 import {Ui1Component} from "./component/ui1/ui1.component";
+import {ModalComponent} from "./component/modal/modal.component";
+import {Ui2Component} from "./component/ui2/ui2.component";
 
 const routes: Routes = [
   {
@@ -52,6 +54,14 @@ const routes: Routes = [
       {
         path: RouterConstant.UI1.path,
         component: Ui1Component,
+      },
+      {
+        path: RouterConstant.UI2.path,
+        component: Ui2Component,
+      },
+      {
+        path: RouterConstant.MODAL.path,
+        component: ModalComponent,
       }
     ]
   }
