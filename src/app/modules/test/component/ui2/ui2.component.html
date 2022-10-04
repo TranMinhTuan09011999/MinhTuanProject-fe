@@ -3,7 +3,7 @@
     <div class="col-lg-12 col-width">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Information</h5>
+          <h5 class="card-title" id="category">Information</h5>
           <form>
             <div class="row mb-3 row-center">
               <div class="col-sm-2">
@@ -18,11 +18,48 @@
 </section>
 <ng-container>
   <ng-template #body>
-    <h1>Body</h1>
+    <section>
+      <table class="m-table">
+        <tr class="m-table__box">
+          <td class="m-table__item m-table__item--head m-table__item--selection width-45">
+            {{'Category'}}
+          </td>
+          <td class="m-table__item m-table__item--head m-table__item--selection width-55">
+            {{'Business Type'}}
+          </td>
+        </tr>
+        <tr class="m-table__box">
+          <td class="m-table__item m-table__item--selection m-table__item--padding">
+            <div class="scroll" id="categoryScroll">
+              <ng-container *ngFor="let item of categoryAndBusinessTypeNameList; let i = index">
+                <!--suppress ALL--> <!-- Note:-->
+                <div id="categoryElement-{{i}}" class="m-table__item--lable" [ngClass]="{'color': chooseCategoryCss(item.category, i)}">
+                  <label>{{item.category}}</label>
+                  <h2>&gt;</h2>
+                </div>
+              </ng-container>
+            </div>
+          </td>
+          <td class="m-table__item m-table__item--radio m-table__item--padding">
+            <div class="scroll padding-top" id="businessTypeNameScroll">
+              <ng-container *ngFor = "let item of this.categorySelection.businessTypeList; let i = index">
+                <div id="businessTypeNameElement-{{i}}" class="mb-2">
+                  <span class="m-radioBtn-flex ml-4">
+                    <input type="radio" id="businessTypeName-{{i}}" name="radioBtn" [checked]="checkedBusinessTypeName(item.businessType, i)">
+                    <label class="m-radioBtn__btn top-10" for="businessTypeName-{{i}}"></label>
+                    <label class = "ml-2 margin-top--5" for="businessTypeName-{{i}}">{{item.businessType}}</label>
+                  </span>
+                </div>
+              </ng-container>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
   </ng-template>
   <ng-template #footer>
     <h1>Footer</h1>
   </ng-template>
+  <app-content-dialog [id]="modalId" [width]="'900px'" [header]="header" [body]="body" [footer]="footer">
+  </app-content-dialog>
 </ng-container>
-<app-content-dialog [id]="modalId" [width]="300" [header]="header" [body]="body" [footer]="footer">
-</app-content-dialog>

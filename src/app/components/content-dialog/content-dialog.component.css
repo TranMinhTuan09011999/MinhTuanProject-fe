@@ -47,6 +47,7 @@
   border: solid 1px #d8dadc;
   border-radius: 5px 5px 0 0;
   text-align: unset;
+  margin-bottom: 0px;
 }
 
 .modal__ttl--text-align-left {
@@ -127,5 +128,4 @@
   justify-content: center;
   border: none;
 }
-
 

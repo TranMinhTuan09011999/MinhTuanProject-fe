@@ -5,3 +5,141 @@
 .row-center {
   justify-content: center;
 }
+
+.m-table {
+  width: 100%;
+  border-top: solid 1px #d8dadc;
+}
+
+.m-table__box {
+  border-bottom: solid 1px #d8dadc;
+}
+
+.m-table__item {
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.m-table__item+.m-table__item {
+  border-left: solid 1px #d8dadc;
+}
+
+.m-table__item--head {
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+
+.m-table__box .m-table__item--selection {
+  border-right: solid 1px #d8dadc;
+  text-align: center;
+}
+
+.m-table__box .m-table__item--selection:first-child {
+  border-left: solid 1px #d8dadc;
+  text-align: center;
+}
+
+.width-45 {
+  width: 45%;
+}
+
+.width-55 {
+  width: 55%;
+}
+
+.m-table__item--padding {
+  padding: 0px;
+}
+
+.m-table__item--lable {
+  text-align: left;
+  border-bottom: 1px solid #d8dadc;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.m-table__item--lable:hover {
+  color: #298bf1
+}
+
+.m-table__item--lable > label {
+  margin-left: 45px;
+  cursor: pointer;
+}
+
+.m-table__item--lable > h2 {
+  float: right;
+  margin-right: 10px;
+  font-size: 1rem;
+  margin-top: 6px;
+  margin-bottom: 5px;
+}
+
+.scroll {
+  max-height: calc(53vh - 76px) !important;
+  overflow-y: auto;
+}
+
+.m-table__item--radio {
+  border-right: solid 1px #d8dadc;
+  word-break: break-word;
+  text-align: left;
+}
+
+.padding-top {
+  padding-top: 7px;
+}
+
+.m-radioBtn-flex {
+  display: flex;
+}
+
+.ml-4 {
+  margin-left: 30px;
+}
+
+.color {
+  color: #298bf1
+}
+
+.m-radioBtn__btn {
+  display: none;
+  width: 13px;
+  height: 13px;
+  border: solid 1px #d8dadc;
+  vertical-align: middle;
+  -webkit-transform: translateY(-.1em);
+  transform: translateY(-.1em);
+  border-radius: 50%;
+  position: relative;
+}
+
+.m-radioBtn__btn::after {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  background-color: #4788EE;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-timing-function: ease;
+}
+
+.m-radioBtn input:checked + .m-radioBtn__btn::after {
+  opacity: 1;
+}
+
+.margin-top--5 {
+  margin-top: 5px;
+}
+
+.ml-2 {
+  margin-left: 10px;
+}
