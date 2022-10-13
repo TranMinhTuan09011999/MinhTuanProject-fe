@@ -1,0 +1,204 @@
+<section class="section" xmlns="http://www.w3.org/1999/html">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 width-60">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-function">
+            <h5>Function:</h5>
+            <h6> + Fill items</h6>
+            <h6> + Don't check validate</h6>
+            <h6> + Show information when click submit</h6>
+          </div>
+          <h5 class="card-title">Please, enter user information</h5>
+          <form [formGroup]="formData">
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">Full name</label>
+              <div class="col-sm-10"><input type="text" class="form-control" formControlName="fullName"></div>
+            </div>
+            <fieldset class="row mb-3">
+              <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+              <div class="col-sm-10 flex">
+                <!-- Note: name and formControlName are the same-->
+                <div class="form-check width-20">
+                  <input class="form-check-input" type="radio" name="gender" id="gridRadios1" formControlName="gender"
+                         [value]="'Male'">
+                  <label class="form-check-label" for="gridRadios1"> Male </label>
+                </div>
+                <div class="form-check width-20">
+                  <input class="form-check-input" type="radio" name="gender" id="gridRadios2" formControlName="gender"
+                         [value]="'Female'">
+                  <label class="form-check-label" for="gridRadios2">Female </label>
+                </div>
+              </div>
+            </fieldset>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">BirthDay</label>
+              <div class="col-sm-10">
+                <!--suppress ALL--> <!-- Note:-->
+                <input class="m-textBtnInput"
+                       type="text"
+                       value=""
+                       maxlength="10"
+                       name="deliveryCompletionDateTo" ngbDatepicker
+                       #DateTo="ngbDatepicker"
+                       formControlName="birthday"
+                >
+                <button class="m-textBtnInput__btn" type="button"
+                        (click)="DateTo.toggle()">
+                  <img src="assets/img/icon_form-btn-calender.svg" alt="ボタン付き入力フォームのカレンダーアイコン">
+                </button>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">Phone Number</label>
+              <div class="col-sm-4">
+                <!--suppress ALL--> <!-- Note:-->
+                <app-number-input
+                  [numberInputId]="'phoneNumber'"
+                  [maxlength]="10"
+                  defaultClass="form-control"
+                  formControlName="phoneNumber">
+                </app-number-input>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <legend class="col-form-label col-sm-2 pt-0">Hobbies</legend>
+              <div class="col-sm-10">
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="sport"
+                                               formControlName="sport"> <label
+                  class="form-check-label" for="sport"> Sport </label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="travel"
+                                               formControlName="travel"> <label
+                  class="form-check-label" for="travel"> Travel </label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="book"
+                                               formControlName="book"> <label
+                  class="form-check-label" for="book"> Book </label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="movie"
+                                               formControlName="movie"> <label
+                  class="form-check-label" for="movie"> Movie </label></div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <legend class="col-form-label col-sm-2 pt-0">Languages</legend>
+              <div class="col-sm-10 width-50">
+                <!-- Note: place [settings] before [data] -->
+                <ng-multiselect-dropdown
+                  [settings]="settings"
+                  [data]="dataSelect"
+                  [placeholder]="'Choose your language'"
+                  class="multi-select-dropdown--modify-width"
+                  formControlName="language">
+                </ng-multiselect-dropdown>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">Note</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" formControlName="note" style="height: 100px"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3 flex-center">
+              <div class="col-sm-10 flex-col">
+                <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" xmlns="http://www.w3.org/1999/html" *ngIf="show">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 width-60">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">User information</h5>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Full name</label>
+            <div class="col-sm-10">
+              <p innerHTML="{{infoShow.fullName}}"></p>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Gender</label>
+            <div class="col-sm-10">
+              <p innerHTML="{{infoShow.gender}}"></p>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">BirthDay</label>
+            <div class="col-sm-10">
+              <p innerHTML="{{infoShow.birthday.day}} / {{infoShow.birthday.month}} / {{infoShow.birthday.year}}"></p>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Phone Number</label>
+            <div class="col-sm-10">
+              <p innerHTML="{{infoShow.phoneNumber}}"></p>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Hobbies</label>
+            <div class="col-sm-10">
+              <p *ngIf="infoShow.sport == true" innerHTML="{{infoShow.sport}}"></p>
+              <p *ngIf="infoShow.travel == true" innerHTML="{{infoShow.travel}}"></p>
+              <p *ngIf="infoShow.book == true" innerHTML="{{infoShow.book}}"></p>
+              <p *ngIf="infoShow.movie == true" innerHTML="{{infoShow.movie}}"></p>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Languages</label>
+            <div class="col-sm-10">
+              <ng-container *ngFor="let item of infoShow.language">
+                <p innerHTML="{{item.language}}"></p>
+              </ng-container>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Note</label>
+            <div class="col-sm-10">
+              <p innerHTML="{{convertBreakLineHtml(infoShow.note)}}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!----------------------------------------------------------------------------- Session 2----------------------------------------------------------------->
+<section class="section" xmlns="http://www.w3.org/1999/html">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 width-60">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-function">
+            <h5>Function:</h5>
+            <h6> + Check validate required into text input tag</h6>
+            <h6> + Check validate pattern into text input tag</h6>
+            <h6> + Show error in UI</h6>
+          </div>
+          <h5 class="card-title">Please, enter user information</h5>
+          <form [formGroup]="formData2">
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">Full name</label>
+              <div class="col-sm-10"><input type="text" class="form-control" formControlName="fullName"></div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">Result</label>
+              <div class="col-sm-10">
+                <p innerHTML="{{userName2}}"></p>
+              </div>
+            </div>
+            <div class="row mb-3 flex-center">
+              <div class="col-sm-10 flex-col">
+                <button type="submit" class="btn btn-primary" (click)="submit2()">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

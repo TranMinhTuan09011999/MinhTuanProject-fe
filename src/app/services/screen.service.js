@@ -48,9 +48,9 @@ var screen_caller_stack_data_1 = require("../models/screen-caller-stack-data");
 var _ = require("lodash");
 var session_attribute_1 = require("../constant/session-attribute");
 var object_util_1 = require("../util/object-util");
-var common_util_1 = require("../util/common-util");
 var portal_type_helper_1 = require("../util/portal-type-helper");
 var router_constant_1 = require("../constant/router-constant");
+var common_util_1 = require("../shared/util/common-util");
 var ScreenService = /** @class */ (function () {
     function ScreenService(sessionService, router) {
         this.sessionService = sessionService;

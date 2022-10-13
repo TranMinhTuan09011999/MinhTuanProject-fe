@@ -42,4 +42,11 @@ export class CustomHandleValidate {
     }
     return this.formClone[key]['errors'][errorCode];
   }
+
+  hasValue(key: string) {
+    if (!this.formClone[key]) {
+      return false;
+    }
+    return this.formClone[key].value;
+  }
 }

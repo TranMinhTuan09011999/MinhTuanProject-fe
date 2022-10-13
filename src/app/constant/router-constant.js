@@ -71,6 +71,14 @@ var RouterConstant = /** @class */ (function () {
         path: 'UI1',
         label: 'UI1'
     };
+    RouterConstant.UI2 = {
+        path: 'UI2',
+        label: 'UI2'
+    };
+    RouterConstant.INPUT_FORM = {
+        path: 'input-form',
+        label: 'input-form'
+    };
     return RouterConstant;
 }());
 exports.RouterConstant = RouterConstant;

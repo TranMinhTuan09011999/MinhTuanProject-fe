@@ -21,6 +21,8 @@ var tables_general_component_1 = require("./component/tables-general/tables-gene
 var tables_data_component_1 = require("./component/tables-data/tables-data.component");
 var ui1_component_1 = require("./component/ui1/ui1.component");
 var modal_component_1 = require("./component/modal/modal.component");
+var ui2_component_1 = require("./component/ui2/ui2.component");
+var input_form_component_1 = require("./component/input-form/input-form.component");
 var routes = [
     {
         path: router_constant_1.RouterConstant.TEST.path,
@@ -63,8 +65,16 @@ var routes = [
                 component: ui1_component_1.Ui1Component
             },
             {
+                path: router_constant_1.RouterConstant.UI2.path,
+                component: ui2_component_1.Ui2Component
+            },
+            {
                 path: router_constant_1.RouterConstant.MODAL.path,
                 component: modal_component_1.ModalComponent
+            },
+            {
+                path: router_constant_1.RouterConstant.INPUT_FORM.path,
+                component: input_form_component_1.InputFormComponent
             }
         ]
     }

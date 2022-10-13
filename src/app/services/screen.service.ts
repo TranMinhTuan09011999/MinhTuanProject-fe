@@ -6,9 +6,9 @@ import {SessionService} from "./session.service";
 import {SessionAttribute} from "../constant/session-attribute";
 import {Router} from "@angular/router";
 import {ObjectUtil} from "../util/object-util";
-import {CommonUtil} from "../util/common-util";
 import {PortalTypeHelper} from "../util/portal-type-helper";
 import {RouterConstant} from "../constant/router-constant";
+import {CommonUtil} from "../shared/util/common-util";
 
 @Injectable({
   providedIn: 'root'

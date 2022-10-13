@@ -2,8 +2,8 @@
 exports.__esModule = true;
 exports.PortalTypeHelper = void 0;
 var portal_type_enum_1 = require("src/app/constant/portal-type.enum");
-var common_util_1 = require("./common-util");
 var router_constant_1 = require("../constant/router-constant");
+var common_util_1 = require("../shared/util/common-util");
 var PortalTypeHelper = /** @class */ (function () {
     function PortalTypeHelper() {
     }

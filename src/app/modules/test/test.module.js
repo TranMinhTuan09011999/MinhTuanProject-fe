@@ -25,6 +25,12 @@ var tables_general_component_1 = require("./component/tables-general/tables-gene
 var tables_data_component_1 = require("./component/tables-data/tables-data.component");
 var ui1_component_1 = require("./component/ui1/ui1.component");
 var modal_component_1 = require("./component/modal/modal.component");
+var ui2_component_1 = require("./component/ui2/ui2.component");
+var shared_module_1 = require("../shared/shared.module");
+var input_form_component_1 = require("./component/input-form/input-form.component");
+var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
+var ng_multiselect_dropdown_1 = require("ng-multiselect-dropdown");
+var ng_select_1 = require("@ng-select/ng-select");
 var TestModule = /** @class */ (function () {
     function TestModule() {
     }
@@ -44,22 +50,22 @@ var TestModule = /** @class */ (function () {
                 tables_general_component_1.TablesGeneralComponent,
                 tables_data_component_1.TablesDataComponent,
                 ui1_component_1.Ui1Component,
-                modal_component_1.ModalComponent
+                modal_component_1.ModalComponent,
+                ui2_component_1.Ui2Component,
+                input_form_component_1.InputFormComponent
             ],
             imports: [
                 common_1.CommonModule,
                 test_routing_module_1.TestRoutingModule,
                 forms_1.FormsModule,
-                forms_1.ReactiveFormsModule
+                forms_1.ReactiveFormsModule,
+                shared_module_1.SharedModule,
+                ng_bootstrap_1.NgbModule,
+                ng_select_1.NgSelectModule,
+                ng_multiselect_dropdown_1.NgMultiSelectDropDownModule, // npm install ng-multiselect-dropdown
             ]
         })
     ], TestModule);
-    return TestModule;
-}());
-exports.TestModule = TestModule;
-var TestModule = /** @class */ (function () {
-    function TestModule() {
-    }
     return TestModule;
 }());
 exports.TestModule = TestModule;

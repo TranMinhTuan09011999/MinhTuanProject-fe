@@ -6,10 +6,10 @@ import {validatorEmailPattern} from "../../../../util/validators/validators-emai
 import {CustomHandleValidate} from "../../../../util/custom-handle-validate";
 import {PortalTypeHelper} from "../../../../util/portal-type-helper";
 import {NonAuthenticateService} from "../../services/non-authenticate.service";
-import {CommonUtil} from "../../../../util/common-util";
 import {SessionService} from "../../../../services/session.service";
 import {SessionAttribute} from "../../../../constant/session-attribute";
 import {ScreenService} from "../../../../services/screen.service";
+import {CommonUtil} from "../../../../shared/util/common-util";
 
 @Component({
   selector: 'app-login',

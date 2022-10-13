@@ -1,0 +1,31 @@
+.width-60 {
+  width: 60%;
+}
+
+.flex {
+  display: flex;
+}
+
+.width-20 {
+  width: 20%;
+}
+
+.multi-select-dropdown--modify-width {
+  width: 140px;
+}
+
+.flex-col {
+  justify-content: center;
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.card-function {
+  font-size: 18px;
+  font-weight: 500;
+  color: #012970;
+  font-family: "Poppins", sans-serif;
+}

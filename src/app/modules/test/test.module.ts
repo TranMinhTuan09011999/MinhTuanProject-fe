@@ -19,7 +19,11 @@ import { Ui1Component } from './component/ui1/ui1.component';
 import { ModalComponent } from './component/modal/modal.component';
 import { Ui2Component } from './component/ui2/ui2.component';
 import {SharedModule} from "../shared/shared.module";
-
+import { InputFormComponent } from './component/input-form/input-form.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
+import { NgSelectModule } from '@ng-select/ng-select';
+import { TableComponent } from './component/table/table.component';
 
 @NgModule({
   declarations: [
@@ -37,14 +41,19 @@ import {SharedModule} from "../shared/shared.module";
     TablesDataComponent,
     Ui1Component,
     ModalComponent,
-    Ui2Component
+    Ui2Component,
+    InputFormComponent,
+    TableComponent
   ],
     imports: [
         CommonModule,
         TestRoutingModule,
         FormsModule,
         ReactiveFormsModule,
-        SharedModule
+        SharedModule,
+        NgbModule, // Note: npm i @ng-bootstrap/ng-bootstrap,
+        NgSelectModule,
+        NgMultiSelectDropDownModule, // npm install ng-multiselect-dropdown
     ]
 })
 export class TestModule { }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ContentDialogService} from "../../../../components/content-dialog/content-dialog.service";
 import * as $ from 'jquery';
-import {CommonUtil} from "../../../../util/common-util";
+import {CommonUtil} from "../../../../shared/util/common-util";
 
 @Component({
   selector: 'app-ui2',

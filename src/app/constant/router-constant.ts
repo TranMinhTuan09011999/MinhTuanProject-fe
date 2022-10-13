@@ -87,4 +87,9 @@ export class RouterConstant {
     path: 'UI2',
     label: 'UI2',
   };
+
+  public static INPUT_FORM: IRoute = {
+    path: 'input-form',
+    label: 'input-form',
+  };
 }

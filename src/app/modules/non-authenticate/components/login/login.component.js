@@ -49,8 +49,8 @@ var forms_1 = require("@angular/forms");
 var validators_email_1 = require("../../../../util/validators/validators-email");
 var custom_handle_validate_1 = require("../../../../util/custom-handle-validate");
 var portal_type_helper_1 = require("../../../../util/portal-type-helper");
-var common_util_1 = require("../../../../util/common-util");
 var session_attribute_1 = require("../../../../constant/session-attribute");
+var common_util_1 = require("../../../../shared/util/common-util");
 var LoginComponent = /** @class */ (function () {
     function LoginComponent(router, formBuilder, activatedRoute, nonAuthenticateService, sessionService, screenService) {
         var _this = this;

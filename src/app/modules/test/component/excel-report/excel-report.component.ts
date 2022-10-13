@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PortalTypeHelper} from "../../../../util/portal-type-helper";
-import {NonAuthenticateService} from "../../../non-authenticate/services/non-authenticate.service";
 import {ExcelService} from "../../services/excel.service";
-import {CommonUtil} from "../../../../util/common-util";
 
 @Component({
   selector: 'app-excel-report',

@@ -34,6 +34,15 @@ var SidebarComponent = /** @class */ (function () {
         this.navigateToUI1 = function () {
             _this.router.navigate([router_constant_1.RouterConstant.TEST.path, router_constant_1.RouterConstant.UI1.path]).then();
         };
+        this.navigateToUI2 = function () {
+            _this.router.navigate([router_constant_1.RouterConstant.TEST.path, router_constant_1.RouterConstant.UI2.path]).then();
+        };
+        this.navigateToModal = function () {
+            _this.router.navigate([router_constant_1.RouterConstant.TEST.path, router_constant_1.RouterConstant.MODAL.path]).then();
+        };
+        this.navigateToInputForm = function () {
+            _this.router.navigate([router_constant_1.RouterConstant.TEST.path, router_constant_1.RouterConstant.INPUT_FORM.path]).then();
+        };
     }
     SidebarComponent.prototype.ngOnInit = function () {
     };

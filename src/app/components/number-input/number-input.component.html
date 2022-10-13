@@ -1,0 +1,21 @@
+<!--suppress ALL--> <!-- Note:-->
+<input *ngIf="!isDisplayLabel"
+       [style]="setWidth()"
+       class="{{defaultClass}}"
+       type="text"
+       [attr.minlength]="minlength"
+       [attr.maxlength]="comma ? maxlengthWithComma : maxlength"
+       placeholder="{{placeHolder}}"
+       (keypress)="keypress($event)"
+       (keydown)="checkInputNumber($event)"
+       (change)="checkInputNumber($event)"
+       [(ngModel)]="value"
+       [ngClass]="disable ? 'm-textInput--inactive' : errorClass"
+       id="{{numberInputId}}"
+       [disabled]="disable"
+       [readonly]="readonly"
+       (paste)="onPaste($event)"
+       (blur)="onChangeReplaceFullWidthNum(this.comma?.maxlength)"
+>
+<label *ngIf="isDisplayLabel" class="ml-1"> {{value | nullHyphen}}
+</label>

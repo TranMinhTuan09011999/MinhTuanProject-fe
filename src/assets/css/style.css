@@ -1068,3 +1068,179 @@
 	font-size: 13px;
 	color: #012970;
   }
+
+  /* ---------------------- Calender ------------------------- */
+  .m-textBtnInput {
+	padding: 0 9px;
+	box-sizing: border-box;
+	font-size: 16px;
+	border: solid 1px #9BA4AD;
+	line-height: 34px;
+	display: inline-block;
+	width: 160px;
+	border-radius: 3px 0 0 3px;
+	vertical-align: middle;
+}
+
+.m-textBtnInput::-webkit-input-placeholder {
+		color: #C1C6CC;
+	}
+
+.m-textBtnInput:-ms-input-placeholder {
+		color: #C1C6CC;
+	}
+
+.m-textBtnInput::-ms-input-placeholder {
+		color: #C1C6CC;
+	}
+
+.m-textBtnInput::placeholder {
+		color: #C1C6CC;
+	}
+
+.m-textBtnInput:focus {
+		outline: none;
+		box-shadow: 0 0 3px rgba( 0, 0, 0, .2 ),
+					0 0 0 rgba( 0, 0, 0, 0 ),
+					0 0 3px rgba( 0, 0, 0, .2 ),
+					0 0 3px rgba( 0, 0, 0, .2 );
+		border: solid 1px #2174ED;
+	}
+
+.m-textBtnInput__btn {
+	line-height: 34px;
+	width: 34px;
+	color: #4c6da0;
+	text-align: center;
+	border-left: none;
+	border-top: solid 1px #9BA4AD;
+	border-bottom: solid 1px #9BA4AD;
+	border-right: solid 1px #9BA4AD;
+	border-radius: 0 3px 3px 0;
+	background-color: #f4f5f6;
+	vertical-align: middle;
+	padding: 0;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+  float: revert;
+}
+
+.m-textBtnInput__btn--inactive {
+		color: #C1C6CC;
+	}
+
+.m-textBtnInput__btn > img {
+		vertical-align: middle;
+		-webkit-transform: translateY(-.1em);
+		        transform: translateY(-.1em);
+	}
+
+.m-textBtnInput:focus + .m-textBtnInput__btn {
+	outline: none;
+	box-shadow: 0 0 3px rgba( 0, 0, 0, .2 ),
+				0 0 0 rgba( 0, 0, 0, .2 ),
+				0 0 3px rgba( 0, 0, 0, .2 ),
+				0 0 3px rgba( 0, 0, 0, 0 );
+	border: solid 1px #2174ED;
+	border-left: none;
+}
+
+.m-textBtnInput--inactive,
+.m-textBtnInput__btn--inactive {
+  border: none;
+  background-color: #f4f5f6;
+  pointer-events: none;
+}
+
+.m-textBtnInput--error,
+.m-textBtnInput__btn--error {
+  border-color: #e64646;
+}
+
+/* ---------------- ng-multiselect-dropdown --------------- */
+
+.selected-item{
+  margin: 1px;
+  font-size: 13px;
+  margin-right: 10px !important;
+  padding: 0 4px !important;
+}
+
+.dropdown-btn {
+  min-height: 34px !important;
+}
+
+.dropdown-list {
+  border: none !important;
+  margin-top: 4px !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .4) !important;
+}
+
+.dropdown-down{
+  margin: auto !important;
+  display: inline-block !important;
+  border-width: 5px 4.25px 0 4.25px !important;
+  border-color: #4c6da0 transparent transparent transparent !important;
+  border-style: solid solid none solid !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 8px !important;
+}
+
+.dropdown-up{
+  margin: auto !important;
+  display: inline-block !important;
+  border-width: 5px 4.25px 0 4.25px !important;
+  border-color: #4c6da0 transparent transparent transparent !important;
+  border-style: solid solid none solid !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 8px !important;
+}
+
+.multiselect-item-checkbox input[type=checkbox] + div:before {
+  width: 13px !important;
+  height: 13px !important;
+  margin-top: -8px !important;
+  border: solid 1px #d8dadc !important;
+  border-radius: 3px !important;
+  transition: none !important;
+}
+
+.multiselect-item-checkbox input[type=checkbox]:checked + div:before {
+  background-color: #4788EE !important;
+  border-color: #4C6DA0 !important;
+  animation: none !important;
+}
+
+.dropdown-list .filter-textbox {
+  padding: 4px !important;
+}
+
+.dropdown-list .filter-textbox input {
+  padding: 0 0 0 7px !important;
+  font-size: 14px !important;
+}
+
+.multiselect-dropdown .dropdown-btn {
+  padding: 5px 5px !important;
+}
+
+.multiselect-item-checkbox input[type=checkbox] + div:after {
+  top: 53% !important;
+  left: 4px !important;
+  width: 7px !important;
+  height: 3px !important;
+  border-width: 0 0 1px 1px !important;
+  transition: none !important;
+}
+
+input[aria-label=multiselect-item]+div{
+  font-size: 13px;
+}
+input[aria-label=multiselect-select-all]+div{
+  font-size: 13px;
+}

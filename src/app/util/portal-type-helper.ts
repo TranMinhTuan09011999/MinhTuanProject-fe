@@ -1,7 +1,7 @@
 import { PortalType } from 'src/app/constant/portal-type.enum';
 import { ActivatedRoute  } from '@angular/router';
-import {CommonUtil} from "./common-util";
 import {RouterConstant} from "../constant/router-constant";
+import {CommonUtil} from "../shared/util/common-util";
 
 export class PortalTypeHelper {
   static getPortalType(activatedRoute: ActivatedRoute): PortalType {
