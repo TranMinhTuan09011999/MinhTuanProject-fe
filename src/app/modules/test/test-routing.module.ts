@@ -14,6 +14,7 @@ import {Ui1Component} from "./component/ui1/ui1.component";
 import {ModalComponent} from "./component/modal/modal.component";
 import {Ui2Component} from "./component/ui2/ui2.component";
 import {InputFormComponent} from "./component/input-form/input-form.component";
+import {TableComponent} from "./component/table/table.component";
 
 const routes: Routes = [
   {
@@ -67,6 +68,10 @@ const routes: Routes = [
       {
         path: RouterConstant.INPUT_FORM.path,
         component: InputFormComponent,
+      },
+      {
+        path: RouterConstant.TABLE.path,
+        component: TableComponent,
       }
     ]
   }

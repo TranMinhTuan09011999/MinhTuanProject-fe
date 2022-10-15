@@ -54,4 +54,8 @@ export class SidebarComponent implements OnInit {
     this.router.navigate([RouterConstant.TEST.path, RouterConstant.INPUT_FORM.path]).then();
   }
 
+  navigateToTable = () => {
+    this.router.navigate([RouterConstant.TEST.path, RouterConstant.TABLE.path]).then();
+  }
+
 }

@@ -1,1 +1,12 @@
-<p>table works!</p>
+<app-tab [selected]="tabSelected">
+  <tab [id]="tab1.name" [name]="tab1.lbl">
+    <ng-template #tabContent>
+      <app-table1></app-table1>
+    </ng-template>
+  </tab>
+  <tab [id]="tab2.name" [name]="tab2.lbl">
+    <ng-template #tabContent>
+      <app-table2></app-table2>
+    </ng-template>
+  </tab>
+</app-tab>

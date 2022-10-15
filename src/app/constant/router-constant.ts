@@ -92,4 +92,10 @@ export class RouterConstant {
     path: 'input-form',
     label: 'input-form',
   };
+
+  public static TABLE: IRoute = {
+    path: 'table',
+    label: 'table',
+  };
+
 }

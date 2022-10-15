@@ -18,12 +18,16 @@ import { TablesDataComponent } from './component/tables-data/tables-data.compone
 import { Ui1Component } from './component/ui1/ui1.component';
 import { ModalComponent } from './component/modal/modal.component';
 import { Ui2Component } from './component/ui2/ui2.component';
-import {SharedModule} from "../shared/shared.module";
 import { InputFormComponent } from './component/input-form/input-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
 import { NgSelectModule } from '@ng-select/ng-select';
 import { TableComponent } from './component/table/table.component';
+import {TabsModule} from "../../components/tabs/tabs.module";
+import { Table1Component } from './component/table1/table1.component';
+import { Table2Component } from './component/table2/table2.component';
+import {SharedModule} from "../../shared/shared.module";
+import {BrowserModule} from "@angular/platform-browser";
 
 @NgModule({
   declarations: [
@@ -43,7 +47,9 @@ import { TableComponent } from './component/table/table.component';
     ModalComponent,
     Ui2Component,
     InputFormComponent,
-    TableComponent
+    TableComponent,
+    Table1Component,
+    Table2Component
   ],
     imports: [
         CommonModule,
@@ -54,6 +60,7 @@ import { TableComponent } from './component/table/table.component';
         NgbModule, // Note: npm i @ng-bootstrap/ng-bootstrap,
         NgSelectModule,
         NgMultiSelectDropDownModule, // npm install ng-multiselect-dropdown
+        TabsModule
     ]
 })
 export class TestModule { }

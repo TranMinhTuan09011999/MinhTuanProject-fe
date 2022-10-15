@@ -1,0 +1,9 @@
+<div class="tab-content">
+  <div *ngFor="let t of tab.tabs" class="tab-pane fade" [class.show]="tab.isSelected(t.id)"
+       [class.active]="tab.isSelected(t.id)" id="{{t.id}}" role="tabpanel" attr.aria-labelledby="{{t.id}}-tab">
+    <!-- Add BrowserModule into tabs.module.ts -->
+    <ng-container
+      [ngTemplateOutlet]="t.contentTamplate"
+    ></ng-container>
+  </div>
+</div>

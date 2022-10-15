@@ -1,0 +1,8 @@
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" *ngFor="let t of tab.tabs" (click)="tab.selectItem(t.id)">
+    <a [class.nav-link]="true" [class.active]="tab.isSelected(t.id)" id="{{t.id}}-tab" href="javascript:void(0)"
+       attr.aria-controls="{{t.id}}" attr.aria-selected="{{tab.isSelected(t.id)}}">
+      {{t.name}}
+    </a>
+  </li>
+</ul>
