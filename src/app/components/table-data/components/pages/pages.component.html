@@ -1,0 +1,26 @@
+<!--suppress ALL--> <!-- Note:-->
+<ul class="pagination justify-content-end">
+  <li [ngClass]="dataTable.first?'page-item disabled': 'page-item'">
+    <a class="page-link" href="javascript:">&lt;&lt;</a>
+  </li>
+  <li [ngClass]="dataTable.first?'page-item disabled': 'page-item'">
+    <a class="page-link" href="javascript:">&lt;</a>
+  </li>
+  <ng-container *ngFor="let p of makeArray(this.dataTable.totalPages,this.dataTable.currentPage)">
+    <li *ngIf="isNumber(p)"  [ngClass]="this.dataTable.currentPage == p ? 'page-item disabled': 'page-item'" (click)="togo(p)">
+      <a class="page-link page-number" href="javascript:">{{p + 1}}</a>
+    </li>
+    <li *ngIf="!isNumber(p)" class="page-item disabled">
+      <a class="page-link page-number" href="javascript:">{{p}}</a>
+    </li>
+  </ng-container>
+  <li [hidden]="!dataTable.isNoRecords" class="page-item disabled">
+    <a class="page-link page-number" href="javascript:">1</a>
+  </li>
+  <li [ngClass]="dataTable.last?'page-item disabled': 'page-item'">
+    <a class="page-link" href="javascript:" >></a>
+  </li>
+  <li [ngClass]="dataTable.last?'page-item disabled': 'page-item'">
+    <a class="page-link" href="javascript:" >>></a>
+  </li>
+</ul>

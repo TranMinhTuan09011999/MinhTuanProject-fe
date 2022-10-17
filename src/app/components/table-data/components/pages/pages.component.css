@@ -1,0 +1,14 @@
+.page-number {
+  color: black;
+}
+
+.page-item.disabled .page-link {
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+  color: grey;
+  cursor: unset;
+}
+
+.page-link:focus {
+  box-shadow: unset;
+}

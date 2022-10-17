@@ -1,0 +1,11 @@
+<div class="pagging">
+  <div class="pagging__range" *ngIf="dataTable.hasPagination">
+    <app-result-range></app-result-range>
+  </div>
+  <div class="flex-container">
+    <div></div>
+    <div class="ms-auto">
+      <app-pages *ngIf="dataTable.hasPagination"></app-pages>
+    </div>
+  </div>
+</div>

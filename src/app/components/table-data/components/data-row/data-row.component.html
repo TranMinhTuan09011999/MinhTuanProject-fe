@@ -1,0 +1,5 @@
+<ng-container *ngFor="let column of dataTable.columns; let i = index">
+  <td class="m-table__item">
+    <span class="ml-4" [textContent]="commonUtil.getValueWithDefaultHyphen(row[column.property])" ></span>
+  </td>
+</ng-container>

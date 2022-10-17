@@ -28,6 +28,7 @@ import { Table1Component } from './component/table1/table1.component';
 import { Table2Component } from './component/table2/table2.component';
 import {SharedModule} from "../../shared/shared.module";
 import {BrowserModule} from "@angular/platform-browser";
+import {TableDataModule} from "../../components/table-data/table-data.module";
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import {BrowserModule} from "@angular/platform-browser";
         NgbModule, // Note: npm i @ng-bootstrap/ng-bootstrap,
         NgSelectModule,
         NgMultiSelectDropDownModule, // npm install ng-multiselect-dropdown
-        TabsModule
+        TabsModule,
+        TableDataModule
     ]
 })
 export class TestModule { }

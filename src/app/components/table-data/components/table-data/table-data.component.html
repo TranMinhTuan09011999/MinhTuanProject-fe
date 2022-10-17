@@ -1,0 +1,36 @@
+<!--suppress ALL--> <!-- Note:-->
+<dl class="contentsTable__data">
+  <dd class="contentsTable__box" *ngIf="hasPagination">
+    <app-pagination></app-pagination>
+  </dd>
+  <dd class="contentsTable__box" [className]="horizontalScrollClass()">
+    <table [ngClass]="[!isColumnStyle?'display-flex':'']">
+      <ng-container *ngIf="isColumnStyle">
+        <tr class="m-table__box--head">
+          <ng-container *ngFor="let column of columns">
+            <td class="m-table__item m-table__item--head">
+              <span [textContent]="column.header"></span>
+            </td>
+          </ng-container>
+        </tr>
+        <tr [hidden]="isNoRecords" *ngFor="let item of dataProccessed;" dataRow [row]="item" class="m-table__box">
+        </tr>
+      </ng-container>
+      <ng-container *ngIf="!isColumnStyle">
+        <div>
+          <td class="m-table-col__box m-table-col__box--head">
+            <ng-container *ngFor="let column of columns" >
+              <tr class="m-table-col__item">
+                <span class="ml-4" [textContent]="column.header" ></span>
+              </tr>
+            </ng-container>
+          </td>
+        </div>
+        <div class="contentsTable__box--horizontal-scroll">
+          <td [hidden]="isNoRecords" *ngFor="let item of dataProccessed;" dataCol [row]="item" class="m-table-col__box">
+          </td>
+        </div>
+      </ng-container>
+    </table>
+  </dd>
+</dl>

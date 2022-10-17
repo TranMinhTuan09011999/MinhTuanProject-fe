@@ -1,0 +1,16 @@
+.m-table__item {
+  max-width: 100%;
+  word-break: break-word;
+  word-wrap: break-word;
+  white-space: pre-line;
+  line-height: 2.2;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 14px;
+  min-width: 240px;
+}
+
+.m-table__item+.m-table__item {
+  border-left: solid 1px #d8dadc;
+}
+

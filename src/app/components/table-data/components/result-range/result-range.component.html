@@ -1,0 +1,6 @@
+<div [hidden]="dataTable.isNoRecords">
+  {{dataTable.fromPage}} &sim; {{dataTable.toPage}} {{'items'}}/{{'total'}} {{dataTable.totalElements}} {{'items'}}
+</div>
+<div [hidden]="!dataTable.isNoRecords">
+  {{dataTable.totalElements}} {{'item'}}
+</div>

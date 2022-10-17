@@ -21,7 +21,7 @@ export class TableComponent implements OnInit {
     lbl: 'tab2',
   };
 
-  public tabSelected = this.tab2.name;
+  public tabSelected = this.tab1.name;
 
   constructor() { }
 
