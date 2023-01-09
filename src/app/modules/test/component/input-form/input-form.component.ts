@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Renderer2} from '@angular/core';
 import {CustomHandleValidate} from "../../../../util/custom-handle-validate";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {CommonUtil} from "../../../../shared/util/common-util";
@@ -25,7 +25,8 @@ export class InputFormComponent implements OnInit {
   public formValidation2!: CustomHandleValidate;
   public userName2: string = '';
 
-  constructor( private formBuilder: FormBuilder) { }
+  constructor( private formBuilder: FormBuilder,
+               private renderer2: Renderer2) { }
 
   ngOnInit(): void {
     this.initFormData();
@@ -33,6 +34,10 @@ export class InputFormComponent implements OnInit {
 
     // session 2
     this.initFormData2();
+
+    // Session 3
+    // When static button "Show Info" not display on UI, dynamic button "Show Info" will display
+    CommonUtil.floatingComponent(this.renderer2, 'dynamicShow', 'staticShow');
   }
 
   private initFormData = () => {
@@ -120,4 +125,6 @@ export class InputFormComponent implements OnInit {
     console.log(formVal2);
     this.userName2 = formVal2.fullName
   }
+
+
 }

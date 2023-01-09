@@ -29,6 +29,7 @@ import { Table2Component } from './component/table2/table2.component';
 import {SharedModule} from "../../shared/shared.module";
 import {BrowserModule} from "@angular/platform-browser";
 import {TableDataModule} from "../../components/table-data/table-data.module";
+import { InputValidatorCheckComponent } from './component/input-validator-check/input-validator-check.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import {TableDataModule} from "../../components/table-data/table-data.module";
     InputFormComponent,
     TableComponent,
     Table1Component,
-    Table2Component
+    Table2Component,
+    InputValidatorCheckComponent
   ],
     imports: [
         CommonModule,

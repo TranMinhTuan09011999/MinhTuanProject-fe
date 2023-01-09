@@ -1,4 +1,5 @@
 import * as _ from 'underscore';
+import {Renderer2} from "@angular/core";
 
 export class CommonUtil {
   static getValueWithDefaultHyphen(object: any, property: string = '') {
@@ -80,6 +81,40 @@ export class CommonUtil {
       content = content.replace(/\n/g, '<br/>');
     }
     return content;
+  }
+
+  /**
+   *
+   * @param renderer2
+   * @param floatingId : floating button
+   * @param floatingBaseIds : static buttons
+   */
+  public static floatingComponent(renderer2: Renderer2, floatingId: string, ...floatingBaseIds: string[]) {
+    const listener = renderer2.listen('window', 'scroll', (e) => {
+      const floating = document.getElementById(floatingId);
+      if (floating) {
+        if (this.checkVisible(...floatingBaseIds)) {
+          floating.style.display = 'none';
+        } else {
+          floating.style.display = 'block';
+        }
+      }
+    });
+    return listener;
+  }
+
+  public static checkVisible(...floatingBaseIds: string[]) {
+    for (const id of floatingBaseIds) {
+      const elm = document.getElementById(id);
+      if (elm) {
+        const rect = elm.getBoundingClientRect();
+        const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+        if (!(rect.bottom < 0 || rect.top - viewHeight >= 0)) {
+          return true;
+        }
+      }
+    }
+    return false;
   }
 
 }

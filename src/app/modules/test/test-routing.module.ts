@@ -15,6 +15,7 @@ import {ModalComponent} from "./component/modal/modal.component";
 import {Ui2Component} from "./component/ui2/ui2.component";
 import {InputFormComponent} from "./component/input-form/input-form.component";
 import {TableComponent} from "./component/table/table.component";
+import {InputValidatorCheckComponent} from "./component/input-validator-check/input-validator-check.component";
 
 const routes: Routes = [
   {
@@ -72,6 +73,10 @@ const routes: Routes = [
       {
         path: RouterConstant.TABLE.path,
         component: TableComponent,
+      },
+      {
+        path: RouterConstant.INPUT_VALIDATOR_CHECK.path,
+        component: InputValidatorCheckComponent,
       }
     ]
   }

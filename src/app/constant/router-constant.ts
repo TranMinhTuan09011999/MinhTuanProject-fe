@@ -98,4 +98,9 @@ export class RouterConstant {
     label: 'table',
   };
 
+  public static INPUT_VALIDATOR_CHECK: IRoute = {
+    path: 'input-validator-check',
+    label: 'input-validator-check',
+  };
+
 }
