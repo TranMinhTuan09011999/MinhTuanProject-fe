@@ -8,7 +8,7 @@ import {UserModule} from "./modules/user/user.module";
 import {AdminModule} from "./modules/admin/admin.module";
 import {TestModule} from "./modules/test/test.module";
 import {MyLifeMyRulesPortalModule} from "./modules/my-life-my-rules-portal/my-life-my-rules-portal.module";
-import { NumberInputComponent } from './components/number-input/number-input.component';
+import {LanguageModule} from "./modules/language/language.module";
 
 @NgModule({
     declarations: [
@@ -21,7 +21,8 @@ import { NumberInputComponent } from './components/number-input/number-input.com
         UserModule,
         AdminModule,
         TestModule,
-        MyLifeMyRulesPortalModule
+        MyLifeMyRulesPortalModule,
+        LanguageModule
     ],
     providers: [],
     bootstrap: [AppComponent]

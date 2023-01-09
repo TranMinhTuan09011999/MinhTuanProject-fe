@@ -27,12 +27,14 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css",
               "src/styles/base.css",
-              "src/assets/css/style.css"
+              "src/assets/css/style.css",
+              "src/assets/language/css/style.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "src/assets/js/main.js",
-              "src/assets/js/modal.js"
+              "src/assets/js/modal.js",
+              "src/assets/language/js/main.js"
             ]
           },
           "configurations": {

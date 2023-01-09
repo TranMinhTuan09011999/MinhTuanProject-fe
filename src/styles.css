@@ -59,7 +59,7 @@ h3, .h3 {
   flex-wrap: wrap;
 }
 a {
-  color: #4650dd!important;
-  text-decoration: underline!important;
+  color: #4650dd;
+  text-decoration: underline;
   cursor: pointer;
 }

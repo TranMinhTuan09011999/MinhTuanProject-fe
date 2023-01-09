@@ -1,0 +1,193 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#language-header {
+  height: 70px;
+  transition: all 0.5s;
+  z-index: 997;
+  background: #000;
+}
+
+#language-header .logo h1 {
+  font-size: 30px;
+  margin: 0;
+  padding: 6px 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#language-header .logo h1 a,
+#language-header .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#language-header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+
+@media (max-width: 992px) {
+  #language-header {
+    height: 60px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation
+*/
+.language-navbar {
+  padding: 0;
+}
+
+.language-navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.language-navbar li {
+  position: relative;
+}
+
+.language-navbar>ul>li+li {
+  margin-left: 30px;
+}
+
+.language-navbar a,
+.language-navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+}
+
+.language-navbar a i,
+.language-navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.language-navbar>ul>li>a:before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  bottom: 3px;
+  left: 0;
+  background-color: #1bac91;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.language-navbar a:hover:before,
+.language-navbar li:hover>a:before,
+.language-navbar .active:before {
+  visibility: visible !important;
+  width: 100% !important;
+  transition: all 0.3s ease-in-out 0s !important;
+}
+
+.language-navbar a:hover,
+.language-navbar .active,
+.language-navbar .active:focus,
+.language-navbar li:hover>a {
+  color: #fff;
+}
+
+/**
+* Mobile Navigation
+*/
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .language-navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(16, 31, 29, 0.9);
+  transition: 0.3s;
+  z-index: 0;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile>ul>li+li {
+  margin: 0;
+}
+
+.navbar-mobile a:hover:before,
+.navbar-mobile li:hover>a:before,
+.navbar-mobile .active:before {
+  visibility: visible !important;
+  width: 100% !important;
+  transition: all 0.3s ease-in-out 0s !important;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #21413c;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #1bac91;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
