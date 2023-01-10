@@ -1,38 +1,51 @@
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#language-header {
-  height: 70px;
+#header {
+  height: 90px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
   transition: all 0.5s;
   z-index: 997;
-  background: #000;
 }
 
-#language-header .logo h1 {
-  font-size: 30px;
-  margin: 0;
-  padding: 6px 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-#language-header .logo h1 a,
-#language-header .logo h1 a:hover {
+#header #logo a {
+  font-weight: bold;
+  font-size: 25px;
   color: #fff;
-  text-decoration: none;
 }
 
-#language-header .logo img {
-  padding: 0;
-  margin: 0;
-  max-height: 40px;
+/*--------------------------------------------------------------
+# Buy Tickets
+--------------------------------------------------------------*/
+.login {
+  color: #fff;
+  background: #f82249;
+  padding: 7px 22px;
+  margin: 0 0 0 15px;
+  border-radius: 50px;
+  border: 2px solid #f82249;
+  transition: all ease-in-out 0.3s;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.login:hover {
+  background: none;
+  color: #fff;
+}
+
+.login:focus {
+  color: #fff;
 }
 
 @media (max-width: 992px) {
-  #language-header {
-    height: 60px;
+  .login {
+    margin: 0 15px 0 0;
   }
 }
 
@@ -42,11 +55,11 @@
 /**
 * Desktop Navigation
 */
-.language-navbar {
+.navbar {
   padding: 0;
 }
 
-.language-navbar ul {
+.navbar ul {
   margin: 0;
   padding: 0;
   display: flex;
@@ -54,58 +67,61 @@
   align-items: center;
 }
 
-.language-navbar li {
+.navbar li {
   position: relative;
 }
 
-.language-navbar>ul>li+li {
-  margin-left: 30px;
+.navbar>ul>li {
+  white-space: nowrap;
+  padding: 10px 0 10px 12px;
 }
 
-.language-navbar a,
-.language-navbar a:focus {
+.navbar a,
+.navbar a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0;
+  color: rgba(202, 206, 221, 0.8);
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.8);
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
+  padding: 6px 4px;
 }
 
-.language-navbar a i,
-.language-navbar a:focus i {
+.navbar a i,
+.navbar a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
 }
 
-.language-navbar>ul>li>a:before {
+.navbar>ul>li>a:before {
   content: "";
   position: absolute;
-  width: 0px;
+  width: 0;
   height: 2px;
-  bottom: 3px;
+  bottom: -6px;
   left: 0;
-  background-color: #1bac91;
+  background-color: #f82249;
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
 }
 
-.language-navbar a:hover:before,
-.language-navbar li:hover>a:before,
-.language-navbar .active:before {
+.navbar a:hover:before,
+.navbar li:hover>a:before,
+.navbar .active:before {
   visibility: visible !important;
   width: 100% !important;
   transition: all 0.3s ease-in-out 0s !important;
 }
 
-.language-navbar a:hover,
-.language-navbar .active,
-.language-navbar .active:focus,
-.language-navbar li:hover>a {
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
   color: #fff;
 }
 
@@ -126,7 +142,7 @@
     display: block;
   }
 
-  .language-navbar ul {
+  .navbar ul {
     display: none;
   }
 }
@@ -138,9 +154,9 @@
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(16, 31, 29, 0.9);
+  background: rgba(0, 0, 0, 0.9);
   transition: 0.3s;
-  z-index: 0;
+  z-index: 999;
 }
 
 .navbar-mobile .mobile-nav-toggle {
@@ -162,29 +178,27 @@
   transition: 0.3s;
 }
 
-.navbar-mobile>ul>li+li {
-  margin: 0;
+.navbar-mobile>ul>li {
+  padding: 0;
 }
 
 .navbar-mobile a:hover:before,
 .navbar-mobile li:hover>a:before,
 .navbar-mobile .active:before {
-  visibility: visible !important;
-  width: 100% !important;
-  transition: all 0.3s ease-in-out 0s !important;
+  visibility: hidden;
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #21413c;
+  color: #060c22;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #1bac91;
+  color: #f82249;
 }
 
 .navbar-mobile .getstarted,

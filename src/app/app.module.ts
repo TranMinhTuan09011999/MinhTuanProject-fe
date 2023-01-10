@@ -9,6 +9,8 @@ import {AdminModule} from "./modules/admin/admin.module";
 import {TestModule} from "./modules/test/test.module";
 import {MyLifeMyRulesPortalModule} from "./modules/my-life-my-rules-portal/my-life-my-rules-portal.module";
 import {LanguageModule} from "./modules/language/language.module";
+import {SwiperModule} from "swiper/angular";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -22,7 +24,8 @@ import {LanguageModule} from "./modules/language/language.module";
         AdminModule,
         TestModule,
         MyLifeMyRulesPortalModule,
-        LanguageModule
+        LanguageModule,
+        SwiperModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

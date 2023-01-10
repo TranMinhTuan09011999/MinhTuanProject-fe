@@ -1,7 +1,32 @@
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-  <div class="container text-center text-md-left" data-aos="fade-up">
-    <h1>Welcome to LANGUAGE-TMT</h1>
-    <h2>Live as if you were to die tomorrow, learn as if you were to live forever.</h2>
+<section id="hero">
+  <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+    <h1 class="mb-4 pb-0">Welcome to LANGUAGE-TMT</h1>
+    <p class="mb-4 pb-0">Live as if you were to die tomorrow, learn as if you were to live forever.</p>
+    <a href="https://youtu.be/D3CwNOnYAZsQ" class="glightbox play-btn mb-4"></a>
+    <div>
+      <swiper
+        [effect]="'coverflow'"
+        [grabCursor]="true"
+        [centeredSlides]="true"
+        [slidesPerView]="'auto'"
+        [initialSlide]="3"
+        [coverflowEffect]="{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true
+        }"
+        [pagination]="true"
+        class="mySwiper">
+        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-1.jpg"/></ng-template>
+        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-2.jpg"/></ng-template>
+        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-3.jpg"/></ng-template>
+        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-4.jpg"/></ng-template>
+        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-5.jpg"/></ng-template>
+        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-6.jpg"/></ng-template>
+        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-7.jpg"/></ng-template>
+      </swiper>
+    </div>
   </div>
-</section><!-- End Hero -->
+</section>

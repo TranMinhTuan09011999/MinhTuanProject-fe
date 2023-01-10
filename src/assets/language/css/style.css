@@ -1,36 +1,3 @@
-body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
-}
-
-a {
-  color: #1bac91;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #22d8b6;
-  text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Raleway", sans-serif;
-}
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}
-
 #hero {
-  background: url("../img/hero-bg.jpg") center center;
+  background: url(../img/hero-bg.jpg) top center;
 }

@@ -6,6 +6,9 @@ import {LanguageComponent} from "./language.component";
 import { HomeComponent } from './component/language-home/home/home.component';
 import { HomeHeaderComponent } from './component/language-home/home-header/home-header.component';
 import { HomeSectionComponent } from './component/language-home/home-section/home-section.component';
+import {SwiperModule} from "swiper/angular";
+import {BrowserModule} from "@angular/platform-browser";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -17,7 +20,8 @@ import { HomeSectionComponent } from './component/language-home/home-section/hom
   ],
   imports: [
     CommonModule,
-    LanguageRoutingModule
+    LanguageRoutingModule,
+    SwiperModule
   ]
 })
 export class LanguageModule { }
