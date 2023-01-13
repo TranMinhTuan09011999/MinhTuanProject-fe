@@ -1,0 +1,55 @@
+/* Sections Header
+--------------------------------*/
+.section-header {
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-header::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: #f82249;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.section-header h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Communication
+--------------------------------*/
+#communication {
+  padding: 60px 0;
+}
+
+#communication .container-fluid {
+  margin-bottom: 3px;
+}
+
+#communication .communication-topic-container {
+  padding-right: 12px;
+}
+
+#communication .communication-topic {
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+
+#communication .communication-topic img {
+  transition: all ease-in-out 0.4s;
+}
+
+#communication .communication-topic:hover img {
+  transform: scale(1.1);
+}
+

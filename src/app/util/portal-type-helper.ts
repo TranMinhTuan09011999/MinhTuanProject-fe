@@ -18,7 +18,7 @@ export class PortalTypeHelper {
     if (!route.routeConfig) {
       console.log(activatedRoute);
       // activatedRoute.routeConfig.data.portalType is get from data of NonAuthenticateRoutingModule
-      // data: { breadcrumb: RouterConstant.NON_AUTHENTICATE_LOGIN.label, portalType: PortalType.MY_LIFE_MY_RULES }
+      // data: { breadcrumb: LanguageRouterConstant.NON_AUTHENTICATE_LOGIN.label, portalType: PortalType.MY_LIFE_MY_RULES }
       // @ts-ignore
       portalType = activatedRoute.routeConfig.data.portalType;
       console.log(portalType);

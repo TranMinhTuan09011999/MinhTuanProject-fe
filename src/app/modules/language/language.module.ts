@@ -9,6 +9,9 @@ import { HomeSectionComponent } from './component/language-home/home-section/hom
 import {SwiperModule} from "swiper/angular";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
+import { LanguageCommunicationComponent } from './component/language-communication/language-communication.component';
+import { LanguageEnglishComponent } from './component/language-english/language-english.component';
+import { LanguageTopicComponent } from './component/language-topic/language-topic.component';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import {FormsModule} from "@angular/forms";
     LanguageComponent,
     HomeComponent,
     HomeHeaderComponent,
-    HomeSectionComponent
+    HomeSectionComponent,
+    LanguageCommunicationComponent,
+    LanguageEnglishComponent,
+    LanguageTopicComponent
   ],
   imports: [
     CommonModule,

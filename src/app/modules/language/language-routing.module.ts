@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {RouterConstant} from "./constant/router-constant";
+import {LanguageRouterConstant} from "./constant/language-router-constant";
 import {LanguageComponent} from "./language.component";
 import {HomeComponent} from "./component/language-home/home/home.component";
+import {LanguageEnglishComponent} from "./component/language-english/language-english.component";
 
 const routes: Routes = [
   {
-    path: RouterConstant.LANGUAGE.path,
+    path: LanguageRouterConstant.LANGUAGE.path,
     component: LanguageComponent,
     children: [
       {
-        path: RouterConstant.LANGUAGE_HOME.path,
+        path: LanguageRouterConstant.LANGUAGE_HOME.path,
         component: HomeComponent
+      },
+      {
+        path: LanguageRouterConstant.LANGUAGE_ENGLISH.path,
+        component: LanguageEnglishComponent
       }
     ]
   }

@@ -1,6 +1,8 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 // import Swiper core and required modules
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
+import {Router} from "@angular/router";
+import {LanguageRouterConstant} from "../../../constant/language-router-constant";
 
 // install Swiper modules
 SwiperCore.use([EffectCoverflow, Pagination]);
@@ -13,9 +15,13 @@ SwiperCore.use([EffectCoverflow, Pagination]);
 })
 export class HomeSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  toLanguageEnglish() {
+    this.router.navigate([LanguageRouterConstant.LANGUAGE.path, LanguageRouterConstant.LANGUAGE_ENGLISH.path]).then();
   }
 
 }
