@@ -1,7 +1,7 @@
 /* Sections Header
 --------------------------------*/
 .section-header {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   position: relative;
   padding-bottom: 20px;
 }
@@ -18,17 +18,18 @@
 }
 
 .section-header h2 {
-  font-size: 36px;
+  font-size: 25px;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: -5px;
+  color: #012970;
 }
 
 /* Communication
 --------------------------------*/
 #communication {
-  padding: 60px 0;
+
 }
 
 #communication .container-fluid {
@@ -51,5 +52,20 @@
 
 #communication .communication-topic:hover img {
   transform: scale(1.1);
+}
+
+.communication-topic-item {
+  padding: 0px 10px;
+}
+
+.communication-title {
+  text-align: center;
+}
+
+.communication-title h3 {
+  font-size: 18px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  color: #012970;
 }
 

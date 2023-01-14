@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import {LanguageRouterConstant} from "../../constant/language-router-constant";
 
 @Component({
   selector: 'app-language-communication',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LanguageCommunicationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  toLanguageTopic() {
+    this.router.navigate([LanguageRouterConstant.LANGUAGE.path, LanguageRouterConstant.LANGUAGE_TOPIC.path]).then();
   }
 
 }

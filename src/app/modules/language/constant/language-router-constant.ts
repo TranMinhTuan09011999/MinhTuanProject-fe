@@ -21,4 +21,9 @@ export class LanguageRouterConstant {
     path: 'topic',
     label: 'topic'
   };
+
+  public static LANGUAGE_COMMUNICATION: IRoute = {
+    path: 'communication',
+    label: 'communication'
+  };
 }

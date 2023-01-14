@@ -7,11 +7,12 @@ import { HomeComponent } from './component/language-home/home/home.component';
 import { HomeHeaderComponent } from './component/language-home/home-header/home-header.component';
 import { HomeSectionComponent } from './component/language-home/home-section/home-section.component';
 import {SwiperModule} from "swiper/angular";
-import {BrowserModule} from "@angular/platform-browser";
-import {FormsModule} from "@angular/forms";
 import { LanguageCommunicationComponent } from './component/language-communication/language-communication.component';
-import { LanguageEnglishComponent } from './component/language-english/language-english.component';
 import { LanguageTopicComponent } from './component/language-topic/language-topic.component';
+import { LanguageEnglishLayoutsHeaderComponent } from './component/language-english/language-english-layouts/language-english-layouts-header/language-english-layouts-header.component';
+import { LanguageEnglishLayoutsSidebarComponent } from './component/language-english/language-english-layouts/language-english-layouts-sidebar/language-english-layouts-sidebar.component';
+import { LanguageEnglishLayoutsFooterComponent } from './component/language-english/language-english-layouts/language-english-layouts-footer/language-english-layouts-footer.component';
+import { LanguageEnglishComponent } from './component/language-english/language-english/language-english.component';
 
 
 @NgModule({
@@ -21,8 +22,11 @@ import { LanguageTopicComponent } from './component/language-topic/language-topi
     HomeHeaderComponent,
     HomeSectionComponent,
     LanguageCommunicationComponent,
-    LanguageEnglishComponent,
-    LanguageTopicComponent
+    LanguageTopicComponent,
+    LanguageEnglishLayoutsHeaderComponent,
+    LanguageEnglishLayoutsSidebarComponent,
+    LanguageEnglishLayoutsFooterComponent,
+    LanguageEnglishComponent
   ],
   imports: [
     CommonModule,
