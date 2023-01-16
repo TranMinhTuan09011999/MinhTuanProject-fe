@@ -23,6 +23,10 @@ const routes: Routes = [
           {
             path: LanguageRouterConstant.LANGUAGE_COMMUNICATION.path,
             component: LanguageCommunicationComponent
+          },
+          {
+            path: LanguageRouterConstant.LANGUAGE_COMMUNICATION_TOPIC.path,
+            component: LanguageTopicComponent
           }
         ]
       },

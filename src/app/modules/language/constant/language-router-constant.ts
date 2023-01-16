@@ -23,6 +23,11 @@ export class LanguageRouterConstant {
   };
 
   public static LANGUAGE_COMMUNICATION: IRoute = {
+    path: 'communication-topics',
+    label: 'communication-topics'
+  };
+
+  public static LANGUAGE_COMMUNICATION_TOPIC: IRoute = {
     path: 'communication',
     label: 'communication'
   };

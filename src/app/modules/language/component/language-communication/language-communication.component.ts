@@ -15,7 +15,11 @@ export class LanguageCommunicationComponent implements OnInit {
   }
 
   toLanguageTopic() {
-    this.router.navigate([LanguageRouterConstant.LANGUAGE.path, LanguageRouterConstant.LANGUAGE_TOPIC.path]).then();
+    this.router.navigate([LanguageRouterConstant.LANGUAGE.path, LanguageRouterConstant.LANGUAGE_ENGLISH.path, LanguageRouterConstant.LANGUAGE_COMMUNICATION_TOPIC.path], {
+      queryParams: {
+        topic: 'Office'
+      }
+    }).then();
   }
 
 }
