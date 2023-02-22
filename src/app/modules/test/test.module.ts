@@ -54,17 +54,17 @@ import { InputValidatorCheckComponent } from './component/input-validator-check/
     Table2Component,
     InputValidatorCheckComponent
   ],
-    imports: [
-        CommonModule,
-        TestRoutingModule,
-        FormsModule,
-        ReactiveFormsModule,
-        SharedModule,
-        NgbModule, // Note: npm i @ng-bootstrap/ng-bootstrap,
-        NgSelectModule,
-        NgMultiSelectDropDownModule, // npm install ng-multiselect-dropdown
-        TabsModule,
-        TableDataModule
-    ]
+  imports: [
+    CommonModule,
+    TestRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SharedModule,
+    NgbModule, // Note: npm i @ng-bootstrap/ng-bootstrap,
+    NgSelectModule,
+    NgMultiSelectDropDownModule, // npm install ng-multiselect-dropdown
+    TabsModule,
+    TableDataModule
+  ]
 })
 export class TestModule { }

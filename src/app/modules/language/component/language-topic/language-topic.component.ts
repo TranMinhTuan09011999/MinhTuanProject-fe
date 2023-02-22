@@ -1,6 +1,6 @@
-import {Component, Inject, OnInit, Renderer2} from '@angular/core';
-import {CommonUtil} from "../../../../shared/util/common-util";
+import {Component, Inject, OnInit} from '@angular/core';
 import {DOCUMENT} from "@angular/common";
+import {ModalService} from "../../../../components/modal/modal.service";
 
 @Component({
   selector: 'app-language-topic',
@@ -9,7 +9,10 @@ import {DOCUMENT} from "@angular/common";
 })
 export class LanguageTopicComponent implements OnInit {
 
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  public sentenceAdditionId = 'sentenceAdditionId';
+
+  constructor(@Inject(DOCUMENT) private document: Document,
+              private modalService: ModalService) { }
 
   ngOnInit(): void {
   }
@@ -25,6 +28,10 @@ export class LanguageTopicComponent implements OnInit {
     edit?.classList.toggle('active');
     const del = document.querySelector('.edit-delete');
     del?.classList.toggle('active');
+  }
+
+  sentenceAdditionModal = () => {
+    this.modalService.open(this.sentenceAdditionId);
   }
 
 }

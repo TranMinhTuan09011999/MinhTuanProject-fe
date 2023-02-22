@@ -126,27 +126,15 @@
 </section>
 
 <div class="" >
-  <div class="m-generalBtn m-generalBtn--fixed btn__floating edit-add">
-    <a href="#" class="m-generalBtn__box">
-      {{"Add"}}
-    </a>
-  </div>
+  <button type="button" class="btn btn-primary btn__floating edit-add" (click)="sentenceAdditionModal()">Add</button>
 </div>
 
 <div class="" >
-  <div class="m-generalBtn m-generalBtn--fixed btn__floating edit-edit">
-    <a href="#" class="m-generalBtn__box">
-      {{"Edit"}}
-    </a>
-  </div>
+  <button type="button" class="btn btn-primary btn__floating edit-edit" (click)="sentenceAdditionModal()">Edit</button>
 </div>
 
 <div class="" >
-  <div class="m-generalBtn m-generalBtn--fixed btn__floating edit-delete">
-    <a href="#" class="m-generalBtn__box">
-      {{"Delete"}}
-    </a>
-  </div>
+  <button type="button" class="btn btn-primary btn__floating edit-delete" (click)="sentenceAdditionModal()">Delete</button>
 </div>
 
 <div class="" >
@@ -156,3 +144,13 @@
     </a>
   </div>
 </div>
+
+<ng-container>
+  <ng-template #body>
+  </ng-template>
+  <ng-template #footer>
+    <h1>Footer</h1>
+  </ng-template>
+  <app-modal [id]="sentenceAdditionId">
+  </app-modal>
+</ng-container>

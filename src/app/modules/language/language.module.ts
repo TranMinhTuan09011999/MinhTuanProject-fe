@@ -13,6 +13,7 @@ import { LanguageEnglishLayoutsHeaderComponent } from './component/language-engl
 import { LanguageEnglishLayoutsSidebarComponent } from './component/language-english/language-english-layouts/language-english-layouts-sidebar/language-english-layouts-sidebar.component';
 import { LanguageEnglishLayoutsFooterComponent } from './component/language-english/language-english-layouts/language-english-layouts-footer/language-english-layouts-footer.component';
 import { LanguageEnglishComponent } from './component/language-english/language-english/language-english.component';
+import {SharedModule} from "../../shared/shared.module";
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { LanguageEnglishComponent } from './component/language-english/language-
   imports: [
     CommonModule,
     LanguageRoutingModule,
-    SwiperModule
+    SwiperModule,
+    SharedModule
   ]
 })
 export class LanguageModule { }

@@ -5,17 +5,20 @@ import {NumberInputComponent} from "../components/number-input/number-input.comp
 import {NullHyphenPipe} from "./pipe/null-hyphen.pipe";
 import {AddCommaPipe} from "./pipe/add-comma-pipe";
 import {FormsModule} from "@angular/forms";
+import {ModalComponent} from "../components/modal/modal.component";
 
 @NgModule({
   declarations: [
     ContentDialogComponent,
     NullHyphenPipe,
     NumberInputComponent,
-    AddCommaPipe
+    AddCommaPipe,
+    ModalComponent
   ],
   exports: [
     ContentDialogComponent,
-    NumberInputComponent // If NumberInputComponent is used in test module, we should declare it in exports
+    NumberInputComponent, // If NumberInputComponent is used in test module, we should declare it in exports
+    ModalComponent
   ],
   imports: [
     CommonModule,
