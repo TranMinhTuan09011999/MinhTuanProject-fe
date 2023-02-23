@@ -1,3 +1,22 @@
 #hero {
   background: url(../img/hero-bg.jpg) top center;
 }
+
+/* ------------ button ----------- */
+.btn-primary {
+  border-radius: 1em;
+}
+
+.btn-primary:hover {
+  background-color: #4154f1;
+}
+
+/* ------------ close button ----------- */
+.btn-secondary {
+  border-radius: 1em;
+}
+
+/* -------------- width --------------- */
+.width-90 {
+  width: 90px;
+}

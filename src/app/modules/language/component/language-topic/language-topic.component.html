@@ -147,10 +147,25 @@
 
 <ng-container>
   <ng-template #body>
+    <form>
+      <div class="mb-3">
+        <label class="col-sm-2 col-form-label">Sentence: </label>
+        <div class="col-sm-12">
+          <textarea class="form-control" style="height: 100px"></textarea>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="col-sm-2 col-form-label">Mean: </label>
+        <div class="col-sm-12">
+          <textarea class="form-control" style="height: 100px"></textarea>
+        </div>
+      </div>
+    </form>
   </ng-template>
   <ng-template #footer>
-    <h1>Footer</h1>
+    <button type="button" class="btn btn-secondary">Close</button>
+    <button type="button" class="btn btn-primary width-90">Save</button>
   </ng-template>
-  <app-modal [id]="sentenceAdditionId">
+  <app-modal [id]="sentenceAdditionId" [width]="'600px'" [header]="header" [body]="body" [footer]="footer">
   </app-modal>
 </ng-container>

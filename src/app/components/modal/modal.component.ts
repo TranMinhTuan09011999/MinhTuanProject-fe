@@ -1,6 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, TemplateRef, ViewChild, ViewContainerRef} from '@angular/core';
 import {ModalService} from "./modal.service";
 import * as $ from "jquery";
+import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-modal',
@@ -11,20 +12,28 @@ export class ModalComponent implements OnInit {
 
   @Input() id!: string;
   @Input() isCompletionModal = false;
+  @Input() header!: string;
+  @Input() width: any;
+  @Input() body!: TemplateRef<any>;
+  @Input() footer!: TemplateRef<any>;
 
   public contentId!: string;
   private isOpening = false;
 
-  constructor(private modalService: ModalService) { }
+  @ViewChild('bodyContainer', { read: ViewContainerRef, static: true }) bodyContainer!: ViewContainerRef;
+  @ViewChild('footerContainer', { read: ViewContainerRef, static: true }) footerContainer!: ViewContainerRef;
+
+  constructor(private modalService: ModalService, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     const model = this;
     this.modalService.setModel(model);
     this.contentId = `${this.id}-content`;
+    this.bodyContainer.createEmbeddedView(this.body);
+    this.footerContainer.createEmbeddedView(this.footer);
   }
 
   open = (dlgId: string) => {
-    console.log(dlgId);
     this.close(() => {
       if (dlgId === undefined) {
         dlgId = this.id;
@@ -67,6 +76,14 @@ export class ModalComponent implements OnInit {
         cb();
       }
     }
+  }
+
+  setWidth() {
+    let style = '';
+    if (this.width) {
+      style = style.concat('width: ' + this.width + ';');
+    }
+    return this.sanitizer.bypassSecurityTrustStyle(style);
   }
 
 }

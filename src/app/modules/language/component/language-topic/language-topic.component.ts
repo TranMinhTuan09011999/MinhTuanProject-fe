@@ -10,6 +10,7 @@ import {ModalService} from "../../../../components/modal/modal.service";
 export class LanguageTopicComponent implements OnInit {
 
   public sentenceAdditionId = 'sentenceAdditionId';
+  public header = 'More communication sentences!!!';
 
   constructor(@Inject(DOCUMENT) private document: Document,
               private modalService: ModalService) { }
